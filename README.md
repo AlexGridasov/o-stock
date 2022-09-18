@@ -1,1 +1,1 @@
-# smia-system
+# Ostock Licensing Service
