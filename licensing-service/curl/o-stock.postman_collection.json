@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "e1335658-2846-4c31-9179-4b400ec54a49",
+		"name": "o-stock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/organization/license [create]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"licenseId\": \"0123456789\",\n    \"description\": \"Software product\",\n    \"organizationId\": \"OptimaGrowth\",\n    \"productName\": \"Ostock\",\n    \"licenseType\": \"complete\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/organization/OptimaGrowth/license",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"organization",
+						"OptimaGrowth",
+						"license"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/organization/license [update]",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"licenseId\": \"0123456789\",\n    \"description\": \"Software product\",\n    \"organizationId\": \"OptimaGrowth\",\n    \"productName\": \"Ostock\",\n    \"licenseType\": \"full\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/organization/OptimaGrowth/license",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"organization",
+						"OptimaGrowth",
+						"license"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/organization/license [get]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"organization",
+						":organizationId",
+						"license",
+						":licenseId"
+					],
+					"variable": [
+						{
+							"key": "organizationId",
+							"value": "OptimaGrowth"
+						},
+						{
+							"key": "licenseId",
+							"value": "0123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/organization/license [delete]",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"organization",
+						":organizationId",
+						"license",
+						":licenseId"
+					],
+					"variable": [
+						{
+							"key": "organizationId",
+							"value": "OptimaGrowth"
+						},
+						{
+							"key": "licenseId",
+							"value": "0123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

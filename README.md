@@ -9,3 +9,6 @@ mvnw.cmd clean install
 ```
 mvnw.cmd spring-boot:run
 ```
+
+## CURL documentation
+https://curl.se/docs/manpage.html
