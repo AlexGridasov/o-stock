@@ -5,10 +5,10 @@
 ####################################
 # License
 ####################################
-curl --insecure -X POST -H 'Content-Type: application/json' --data @license.json 'http://localhost:8080/v1/organization/OptimaGrowth/license' -v
+curl --insecure -X POST -H 'Content-Type: application/json' -H 'Accept-Language: es' --data @license.json 'http://localhost:8080/v1/organization/OptimaGrowth/license' -v
 
-curl --insecure -X PUT -H 'Content-Type: application/json' --data @license-full.json 'http://localhost:8080/v1/organization/OptimaGrowth/license' -v
+curl --insecure -X PUT -H 'Content-Type: application/json' -H 'Accept-Language: es' --data @license-full.json 'http://localhost:8080/v1/organization/OptimaGrowth/license' -v
 
 curl --location -X GET 'http://localhost:8080/v1/organization/OptimaGrowth/license/0123456789'
 
-curl --location -X DELETE 'http://localhost:8080/v1/organization/OptimaGrowth/license/0123456789'
+curl --location -X DELETE -H 'Accept-Language: es' 'http://localhost:8080/v1/organization/OptimaGrowth/license/0123456789'
