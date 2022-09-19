@@ -9,7 +9,13 @@
 			"name": "/organization/license [create]",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "es",
+						"type": "default"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"licenseId\": \"0123456789\",\n    \"description\": \"Software product\",\n    \"organizationId\": \"OptimaGrowth\",\n    \"productName\": \"Ostock\",\n    \"licenseType\": \"complete\"\n}",
@@ -40,7 +46,13 @@
 			"name": "/organization/license [update]",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "es",
+						"type": "default"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"licenseId\": \"0123456789\",\n    \"description\": \"Software product\",\n    \"organizationId\": \"OptimaGrowth\",\n    \"productName\": \"Ostock\",\n    \"licenseType\": \"full\"\n}",
@@ -104,7 +116,13 @@
 			"name": "/organization/license [delete]",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "es",
+						"type": "default"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId",
 					"protocol": "http",
