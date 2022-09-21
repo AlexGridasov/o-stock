@@ -12,3 +12,8 @@ curl --insecure -X PUT -H 'Content-Type: application/json' -H 'Accept-Language: 
 curl --location -X GET 'http://localhost:8080/v1/organization/OptimaGrowth/license/0123456789'
 
 curl --location -X DELETE -H 'Accept-Language: es' 'http://localhost:8080/v1/organization/OptimaGrowth/license/0123456789'
+
+####################################
+# Health
+####################################
+curl --location -X GET 'http://localhost:8080/health'
