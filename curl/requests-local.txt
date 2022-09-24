@@ -3,7 +3,7 @@
 #
 
 ####################################
-# License
+# License Service
 ####################################
 curl --insecure -X POST -H 'Content-Type: application/json' -H 'Accept-Language: es' --data @license.json 'http://localhost:8080/v1/organization/OptimaGrowth/license' -v
 
@@ -13,7 +13,11 @@ curl --location -X GET 'http://localhost:8080/v1/organization/OptimaGrowth/licen
 
 curl --location -X DELETE -H 'Accept-Language: es' 'http://localhost:8080/v1/organization/OptimaGrowth/license/0123456789'
 
-####################################
 # Health
-####################################
 curl --location -X GET 'http://localhost:8080/health'
+
+
+####################################
+# Configuration Server
+####################################
+curl --location -X GET 'http://localhost:8071/licensing-service/default'
