@@ -1,0 +1,23 @@
+server:
+  port: '8080'
+
+spring:
+  application:
+    name: licensing-service
+  config:
+    import: optional:configserver:http://configserver:8071
+
+management:
+  endpoints:
+    web:
+      base-path: /
+    enabled-by-default: 'false'
+  health:
+    diskspace:
+      enabled: 'true'
+    db:
+      enabled: 'false'
+  endpoint:
+    health:
+      enabled: 'true'
+      show-details: always

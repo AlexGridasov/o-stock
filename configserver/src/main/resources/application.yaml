@@ -2,4 +2,7 @@ server:
   port : 8071
 
 spring:
-  profiles.active: native
+  application:
+    name: config-server
+  profiles:
+    active: native
