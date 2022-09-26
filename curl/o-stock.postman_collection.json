@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "bc74954e-153e-4176-9dc2-d56492396371",
+		"_postman_id": "5343a37e-33f3-43f2-9364-ae0d8a3c866a",
 		"name": "o-stock",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -47,6 +47,26 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "/licensing-service/prod [config]",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8071/licensing-service/prod",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8071",
+							"path": [
+								"licensing-service",
+								"prod"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -61,12 +81,13 @@
 							{
 								"key": "Accept-Language",
 								"value": "es",
-								"type": "default"
+								"type": "default",
+								"disabled": true
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"licenseId\": \"0123456789\",\n    \"description\": \"Software product\",\n    \"organizationId\": \"OptimaGrowth\",\n    \"productName\": \"Ostock\",\n    \"licenseType\": \"complete\"\n}",
+							"raw": "{\n    \"licenseId\": \"0123456789\",\n    \"description\": \"Software product\",\n    \"organizationId\": \"d898a142-de44-466c-8c88-9ceb2c2429d3\",\n    \"productName\": \"Ostock\",\n    \"licenseType\": \"complete\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -98,12 +119,13 @@
 							{
 								"key": "Accept-Language",
 								"value": "es",
-								"type": "default"
+								"type": "default",
+								"disabled": true
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"licenseId\": \"0123456789\",\n    \"description\": \"Software product\",\n    \"organizationId\": \"OptimaGrowth\",\n    \"productName\": \"Ostock\",\n    \"licenseType\": \"full\"\n}",
+							"raw": "{\n    \"licenseId\": \"0123456789\",\n    \"description\": \"Software product\",\n    \"organizationId\": \"d898a142-de44-466c-8c88-9ceb2c2429d3\",\n    \"productName\": \"Ostock\",\n    \"licenseType\": \"full\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -149,7 +171,7 @@
 							"variable": [
 								{
 									"key": "organizationId",
-									"value": "OptimaGrowth"
+									"value": "d898a142-de44-466c-8c88-9ceb2c2429d3"
 								},
 								{
 									"key": "licenseId",
@@ -168,7 +190,8 @@
 							{
 								"key": "Accept-Language",
 								"value": "es",
-								"type": "default"
+								"type": "default",
+								"disabled": true
 							}
 						],
 						"url": {
@@ -188,7 +211,7 @@
 							"variable": [
 								{
 									"key": "organizationId",
-									"value": "OptimaGrowth"
+									"value": "d898a142-de44-466c-8c88-9ceb2c2429d3"
 								},
 								{
 									"key": "licenseId",
@@ -213,6 +236,25 @@
 							"port": "8080",
 							"path": [
 								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/env",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/env",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"env"
 							]
 						}
 					},

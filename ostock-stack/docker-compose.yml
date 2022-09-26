@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3.9'
 services:
   database:
     image: postgres:latest
@@ -36,7 +36,7 @@ services:
     image: ostock/licensing-service:0.0.1-SNAPSHOT
     environment:
       SPRING_PROFILES_ACTIVE: "prod"
-      CONFIGSERVER_URI: "http://configserver:8071"
+      SPRING_CLOUD_CONFIG_URI: "http://configserver:8071"
       CONFIGSERVER_PORT:   "8071"
       DATABASESERVER_PORT: "5432"
 #      ENCRYPT_KEY:       "IMSYMMETRIC"
