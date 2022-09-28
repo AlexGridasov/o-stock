@@ -1,0 +1,9 @@
+server:
+  port: '8070'
+
+spring:
+  application:
+    name: eureka-server
+  config:
+    import: optional:configserver:http://localhost:8071
+
