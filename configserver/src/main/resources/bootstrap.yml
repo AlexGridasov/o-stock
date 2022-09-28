@@ -4,7 +4,7 @@ spring:
       server:
         #Local configuration: This locations can either of classpath or locations in the filesystem.
         native:
-          #Reads from a specific filesystem folder
           search-locations:
             classpath:/config
+            #Reads from a specific filesystem folder
 #            file:///{FILE_PATH}

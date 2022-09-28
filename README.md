@@ -47,8 +47,6 @@ docker stop <container_id>
 
 # Docker Compose commands
 ```bash
-
-
 # Builds the images for your application and starts the services you define.
 # This command downloads all the necessary images and then deploys these and starts the container.
 # The -d parameter indicates to run Docker in the background.

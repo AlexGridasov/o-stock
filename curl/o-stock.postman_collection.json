@@ -67,6 +67,52 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "/encrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "postgres"
+						},
+						"url": {
+							"raw": "http://localhost:8071/encrypt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8071",
+							"path": [
+								"encrypt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/decrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "cfd2fcff2c4f1a0ae81988fa7bd98bb440be1652e64c137587ce17e316050fee"
+						},
+						"url": {
+							"raw": "http://localhost:8071/decrypt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8071",
+							"path": [
+								"decrypt"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -175,7 +221,7 @@
 								},
 								{
 									"key": "licenseId",
-									"value": "0123456789"
+									"value": "f2a9c9d4-d2c0-44fa-97fe-724d77173c62"
 								}
 							]
 						}
