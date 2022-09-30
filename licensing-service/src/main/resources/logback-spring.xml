@@ -32,13 +32,11 @@
         </rollingPolicy>
     </appender>
 
-    <!-- LOG everything at INFO level -->
     <root level="info">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </root>
 
-    <!-- LOG "com.gri.alex.*" at DEBUG level -->
     <logger name="com.gri.alex" level="debug" additivity="false">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />

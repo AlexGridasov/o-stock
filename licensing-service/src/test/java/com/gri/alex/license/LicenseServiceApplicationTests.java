@@ -1,10 +1,12 @@
-package com.gri.alex;
+package com.gri.alex.license;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
+@ActiveProfiles("dev")
 @SpringBootTest
-class ConfigurationServerApplicationTests {
+class LicenseServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,4 +1,4 @@
-package com.gri.alex.repository;
+package com.gri.alex.license.repository;
 
 import com.gri.alex.license.model.License;
 import org.springframework.data.repository.CrudRepository;

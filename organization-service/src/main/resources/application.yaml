@@ -1,11 +1,11 @@
 server:
-  port: '8080'
+  port: '8081'
 
 spring:
   application:
-    name: licensing-service
+    name: organization-service
   config:
-    import: optional:configserver:http://configserver:8071
+    import: optional:configserver:http://localhost:8071
 
 management:
   endpoints:

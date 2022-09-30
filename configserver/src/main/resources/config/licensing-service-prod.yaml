@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://database:5432/ostock_prod
+    username: postgres
+    password: '{cipher}cfd2fcff2c4f1a0ae81988fa7bd98bb440be1652e64c137587ce17e316050fee'
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://eureka:8070/eureka
+
+example:
+  property: I AM PROD

@@ -2,9 +2,9 @@ package com.gri.alex.license.service;
 
 import java.util.UUID;
 
-import com.gri.alex.config.ServiceConfig;
+import com.gri.alex.license.config.ServiceConfig;
 import com.gri.alex.license.model.License;
-import com.gri.alex.repository.LicenseRepository;
+import com.gri.alex.license.repository.LicenseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;

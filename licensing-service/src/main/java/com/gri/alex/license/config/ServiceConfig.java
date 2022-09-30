@@ -1,4 +1,4 @@
-package com.gri.alex.config;
+package com.gri.alex.license.config;
 
 import lombok.Getter;
 import lombok.Setter;

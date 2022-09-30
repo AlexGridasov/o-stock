@@ -3,6 +3,6 @@ spring:
     name: eureka-server
   cloud:
     config:
-      uri: http://configserver:8071
+      uri: http://localhost:8071
   config:
     import: optional:configserver:http://localhost:8071

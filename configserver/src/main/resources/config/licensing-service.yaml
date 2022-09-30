@@ -1,0 +1,38 @@
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database: POSTGRESQL
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      ddl-auto: none
+    show-sql: 'true'
+  database:
+    driverClassName: org.postgresql.Driver
+  datasource:
+    testWhileIdle: 'true'
+    url: jdbc:postgresql://localhost:5432/ostock_dev
+    username: postgres
+    password: '{cipher}cfd2fcff2c4f1a0ae81988fa7bd98bb440be1652e64c137587ce17e316050fee'
+    validationQuery: SELECT 1
+    platform: postgres
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+#eureka:
+#  instance:
+#    preferIpAddress: 'true'
+#  client:
+#    fetchRegistry: 'true'
+#    registerWithEureka: 'true'
+#    serviceUrl:
+#      defaultZone: http://localhost:8070/eureka
+
+example:
+  property: I AM THE DEFAULT
