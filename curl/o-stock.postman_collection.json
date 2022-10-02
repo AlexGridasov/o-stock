@@ -29,26 +29,6 @@
 					"response": []
 				},
 				{
-					"name": "/licensing-service/dev [config]",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8071/licensing-service/dev",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8071",
-							"path": [
-								"licensing-service",
-								"dev"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "/licensing-service/prod [config]",
 					"request": {
 						"method": "GET",
@@ -229,6 +209,108 @@
 					"response": []
 				},
 				{
+					"name": "/organization/license [get] feign",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId/feign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"organization",
+								":organizationId",
+								"license",
+								":licenseId",
+								"feign"
+							],
+							"variable": [
+								{
+									"key": "organizationId",
+									"value": "d898a142-de44-466c-8c88-9ceb2c2429d3"
+								},
+								{
+									"key": "licenseId",
+									"value": "f2a9c9d4-d2c0-44fa-97fe-724d77173c62"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/organization/license [get] discovery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId/discovery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"organization",
+								":organizationId",
+								"license",
+								":licenseId",
+								"discovery"
+							],
+							"variable": [
+								{
+									"key": "organizationId",
+									"value": "d898a142-de44-466c-8c88-9ceb2c2429d3"
+								},
+								{
+									"key": "licenseId",
+									"value": "f2a9c9d4-d2c0-44fa-97fe-724d77173c62"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/organization/license [get] rest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId/rest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"organization",
+								":organizationId",
+								"license",
+								":licenseId",
+								"rest"
+							],
+							"variable": [
+								{
+									"key": "organizationId",
+									"value": "d898a142-de44-466c-8c88-9ceb2c2429d3"
+								},
+								{
+									"key": "licenseId",
+									"value": "f2a9c9d4-d2c0-44fa-97fe-724d77173c62"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "/organization/license [delete]",
 					"request": {
 						"method": "DELETE",
@@ -301,6 +383,32 @@
 							"port": "8080",
 							"path": [
 								"env"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "eureka",
+			"item": [
+				{
+					"name": "/eureka/apps/organization-service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/eureka/apps/organization-service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"eureka",
+								"apps",
+								"organization-service"
 							]
 						}
 					},

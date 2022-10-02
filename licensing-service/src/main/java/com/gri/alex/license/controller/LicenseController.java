@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -43,13 +42,13 @@ public class LicenseController {
         return ResponseEntity.ok(license);
     }
 
-    /* @RequestMapping(value="/{licenseId}/{clientType}",method = RequestMethod.GET)
+    @GetMapping(value="/{licenseId}/{clientType}")
     public License getLicensesWithClient( @PathVariable("organizationId") String organizationId,
                                           @PathVariable("licenseId") String licenseId,
                                           @PathVariable("clientType") String clientType) {
 
         return licenseService.getLicense(licenseId, organizationId, clientType);
-    } */
+    }
 
     @PutMapping
     public ResponseEntity<License> updateLicense(@RequestBody License request) {
