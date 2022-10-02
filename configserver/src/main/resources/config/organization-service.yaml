@@ -25,17 +25,17 @@ spring:
       ribbon:
         enabled: 'false'
 
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-
-#eureka:
-#  instance:
-#    preferIpAddress: 'true'
-#  client:
-#    fetchRegistry: 'true'
-#    registerWithEureka: 'true'
-#    serviceUrl:
-#      defaultZone: http://localhost:8070/eureka/

@@ -1,0 +1,14 @@
+server:
+  port: '8081'
+
+spring:
+  application:
+    name: organization-service
+  config:
+    import: optional:configserver:http://configserver:8071
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

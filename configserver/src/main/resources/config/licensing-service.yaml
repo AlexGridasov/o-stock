@@ -25,14 +25,14 @@ management:
       exposure:
         include: '*'
 
-#eureka:
-#  instance:
-#    preferIpAddress: 'true'
-#  client:
-#    fetchRegistry: 'true'
-#    registerWithEureka: 'true'
-#    serviceUrl:
-#      defaultZone: http://localhost:8070/eureka
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8070/eureka}
 
 example:
   property: I AM THE DEFAULT

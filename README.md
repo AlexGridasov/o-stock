@@ -35,6 +35,8 @@ $ ./mvnw spring-boot:build-image
 $ docker-compose -f docker/docker-compose.yml up
 ```
 
+# Eureka
+Browsers to http://localhost:8070 to view the Eureka dashboard
 
 # Docker commands
 ```
