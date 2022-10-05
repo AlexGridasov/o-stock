@@ -9,7 +9,7 @@ spring:
 
 resilience4j.circuitbreaker:
   instances:
-    database:
+    licenseService:
       registerHealthIndicator: true
       ringBufferSizeInClosedState: 5
       ringBufferSizeInHalfOpenState: 3
@@ -27,6 +27,19 @@ resilience4j.circuitbreaker:
       ringBufferSizeInHalfOpenState: 4
       waitDurationInOpenState: 20s
       failureRateThreshold: 60
+
+resilience4j.bulkhead:
+  instances:
+    bulkheadLicenseService:
+      maxWaitDuration: 2ms
+      maxConcurrentCalls: 20
+
+resilience4j.thread-pool-bulkhead:
+  instances:
+    bulkheadLicenseService:
+      maxThreadPoolSize: 1
+      coreThreadPoolSize: 1
+      queueCapacity: 1
 
 management:
   endpoints:
