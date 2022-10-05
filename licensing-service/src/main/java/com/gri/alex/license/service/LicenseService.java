@@ -1,7 +1,5 @@
 package com.gri.alex.license.service;
 
-import java.util.UUID;
-
 import com.gri.alex.license.config.ServiceConfig;
 import com.gri.alex.license.model.License;
 import com.gri.alex.license.model.Organization;
@@ -9,12 +7,20 @@ import com.gri.alex.license.repository.LicenseRepository;
 import com.gri.alex.license.service.client.OrganizationDiscoveryClient;
 import com.gri.alex.license.service.client.OrganizationFeignClient;
 import com.gri.alex.license.service.client.OrganizationRestTemplateClient;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Random;
+import java.util.UUID;
 
 @Service
 public class LicenseService {
+
+    private static final Logger logger = LoggerFactory.getLogger(LicenseService.class);
 
     @Autowired
     MessageSource messages;
@@ -106,5 +112,28 @@ public class LicenseService {
 
         return String.format(
                 messages.getMessage("license.delete.message", null, null), licenseId);
+    }
+
+    private void randomlyRunLong() {
+        Random rand = new Random();
+        int randomNum = rand.nextInt(2) + 1;
+        if (randomNum == 2) {
+            sleep();
+        }
+    }
+
+    private void sleep() {
+        try {
+            Thread.sleep(3000);
+            throw new RuntimeException();
+        } catch (InterruptedException e) {
+            logger.error(e.getMessage());
+        }
+    }
+
+    @CircuitBreaker(name = "database")
+    public List<License> getLicensesByOrganization(String organizationId) {
+        randomlyRunLong();
+        return licenseRepository.findByOrganizationId(organizationId);
     }
 }
