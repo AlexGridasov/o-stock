@@ -9,6 +9,7 @@ import com.gri.alex.license.service.client.OrganizationFeignClient;
 import com.gri.alex.license.service.client.OrganizationRestTemplateClient;
 import io.github.resilience4j.bulkhead.annotation.Bulkhead;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -136,6 +137,7 @@ public class LicenseService {
     @CircuitBreaker(name = "licenseService", fallbackMethod= "buildFallbackLicenseList")
     @Bulkhead(name = "bulkheadLicenseService", fallbackMethod = "buildFallbackLicenseList"
             ,type= Bulkhead.Type.THREADPOOL)
+    @Retry(name = "retryLicenseService", fallbackMethod = "buildFallbackLicenseList")
     public List<License> getLicensesByOrganization(String organizationId) {
         randomlyRunLong();
         return licenseRepository.findByOrganizationId(organizationId);

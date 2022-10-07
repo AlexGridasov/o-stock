@@ -41,6 +41,14 @@ resilience4j.thread-pool-bulkhead:
       coreThreadPoolSize: 1
       queueCapacity: 1
 
+resilience4j.retry:
+  instances:
+    retryLicenseService:
+      maxAttempts: 5
+      waitDuration: 10000
+      retry-exceptions:
+        - java.util.concurrent.TimeoutException
+
 management:
   endpoints:
     web:
