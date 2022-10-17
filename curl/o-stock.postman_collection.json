@@ -209,6 +209,41 @@
 					"response": []
 				},
 				{
+					"name": "/organization/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "tmx-correlation-id",
+								"value": "TMX-CORRELATION-ID",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/organization/:organizationId/license/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"organization",
+								":organizationId",
+								"license",
+								""
+							],
+							"variable": [
+								{
+									"key": "organizationId",
+									"value": "e6a625cc-718b-48c2-ac76-1dfdff9a531e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "/organization/license [get] feign",
 					"request": {
 						"method": "GET",
@@ -351,18 +386,19 @@
 					"response": []
 				},
 				{
-					"name": "/health",
+					"name": "actuator/health",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/health",
+							"raw": "http://localhost:8080/actuator/health",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"actuator",
 								"health"
 							]
 						}
@@ -370,19 +406,67 @@
 					"response": []
 				},
 				{
-					"name": "/env",
+					"name": "actuator/env",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/env",
+							"raw": "http://localhost:8080/actuator/env",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"actuator",
 								"env"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actuator/metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/actuator/metrics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actuator/metrics/:metric",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/actuator/metrics/:metric",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"metrics",
+								":metric"
+							],
+							"variable": [
+								{
+									"key": "metric",
+									"value": "resilience4j.circuitbreaker.calls"
+								}
 							]
 						}
 					},

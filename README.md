@@ -53,6 +53,7 @@ docker stop <container_id>
 # This command downloads all the necessary images and then deploys these and starts the container.
 # The -d parameter indicates to run Docker in the background.
 docker-compose up -d
+docker-compose -f docker-compose-db.yml up
 
 # Lets you view all the information about your latest deployment.
 docker-compose logs

@@ -7,6 +7,7 @@ import com.gri.alex.license.repository.LicenseRepository;
 import com.gri.alex.license.service.client.OrganizationDiscoveryClient;
 import com.gri.alex.license.service.client.OrganizationFeignClient;
 import com.gri.alex.license.service.client.OrganizationRestTemplateClient;
+import com.gri.alex.license.service.utils.UserContextHolder;
 import io.github.resilience4j.bulkhead.annotation.Bulkhead;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
@@ -141,6 +142,9 @@ public class LicenseService {
     @Bulkhead(name = "bulkheadLicenseService", fallbackMethod = "buildFallbackLicenseList"
             ,type= Bulkhead.Type.THREADPOOL)
     public List<License> getLicensesByOrganization(String organizationId) {
+        logger.debug("getLicensesByOrganization Correlation id: {}",
+                     UserContextHolder.getContext().getCorrelationId());
+
         randomlyRunLong();
         return licenseRepository.findByOrganizationId(organizationId);
     }
