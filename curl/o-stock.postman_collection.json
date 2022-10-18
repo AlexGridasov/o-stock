@@ -499,6 +499,57 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "/gateway/routes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/actuator/gateway/routes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"actuator",
+						"gateway",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/gateway/license",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8072/license/v1/organization/:organizationId/license/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8072",
+					"path": [
+						"license",
+						"v1",
+						"organization",
+						":organizationId",
+						"license",
+						""
+					],
+					"variable": [
+						{
+							"key": "organizationId",
+							"value": "e6a625cc-718b-48c2-ac76-1dfdff9a531e"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
