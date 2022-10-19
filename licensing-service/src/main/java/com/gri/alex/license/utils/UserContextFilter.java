@@ -1,4 +1,4 @@
-package com.gri.alex.license.service.utils;
+package com.gri.alex.license.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

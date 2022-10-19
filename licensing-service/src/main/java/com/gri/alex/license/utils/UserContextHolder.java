@@ -1,4 +1,4 @@
-package com.gri.alex.license.service.utils;
+package com.gri.alex.license.utils;
 
 import org.springframework.util.Assert;
 

@@ -2,7 +2,7 @@ package com.gri.alex.license.controller;
 
 import com.gri.alex.license.model.License;
 import com.gri.alex.license.service.LicenseService;
-import com.gri.alex.license.service.utils.UserContextHolder;
+import com.gri.alex.license.utils.UserContextHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

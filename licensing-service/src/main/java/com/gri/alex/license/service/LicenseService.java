@@ -7,7 +7,7 @@ import com.gri.alex.license.repository.LicenseRepository;
 import com.gri.alex.license.service.client.OrganizationDiscoveryClient;
 import com.gri.alex.license.service.client.OrganizationFeignClient;
 import com.gri.alex.license.service.client.OrganizationRestTemplateClient;
-import com.gri.alex.license.service.utils.UserContextHolder;
+import com.gri.alex.license.utils.UserContextHolder;
 import io.github.resilience4j.bulkhead.annotation.Bulkhead;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
@@ -77,19 +77,19 @@ public class LicenseService {
 
         switch (clientType) {
             case "feign":
-                System.out.println("I am using the feign client");
+                logger.info("I am using the feign client");
                 organization = organizationFeignClient.getOrganization(organizationId);
                 break;
             case "rest":
-                System.out.println("I am using the rest client");
+                logger.info("I am using the rest client");
                 organization = organizationRestClient.getOrganization(organizationId);
                 break;
             case "discovery":
-                System.out.println("I am using the discovery client");
+                logger.info("I am using the discovery client");
                 organization = organizationDiscoveryClient.getOrganization(organizationId);
                 break;
             default:
-                System.out.println("I am using the rest client (default)");
+                logger.info("I am using the rest client (default)");
                 organization = organizationRestClient.getOrganization(organizationId);
                 break;
         }
