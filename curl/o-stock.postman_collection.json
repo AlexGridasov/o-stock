@@ -14,12 +14,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8071/licensing-service/default",
+							"raw": "http://localhost:{{CONFIG_PORT}}/licensing-service/default",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8071",
+							"port": "{{CONFIG_PORT}}",
 							"path": [
 								"licensing-service",
 								"default"
@@ -34,12 +34,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8071/licensing-service/prod",
+							"raw": "http://localhost:{{CONFIG_PORT}}/licensing-service/prod",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8071",
+							"port": "{{CONFIG_PORT}}",
 							"path": [
 								"licensing-service",
 								"prod"
@@ -58,12 +58,12 @@
 							"raw": "postgres"
 						},
 						"url": {
-							"raw": "http://localhost:8071/encrypt",
+							"raw": "http://localhost:{{CONFIG_PORT}}/encrypt",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8071",
+							"port": "{{CONFIG_PORT}}",
 							"path": [
 								"encrypt"
 							]
@@ -81,12 +81,12 @@
 							"raw": "cfd2fcff2c4f1a0ae81988fa7bd98bb440be1652e64c137587ce17e316050fee"
 						},
 						"url": {
-							"raw": "http://localhost:8071/decrypt",
+							"raw": "http://localhost:{{CONFIG_PORT}}/decrypt",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8071",
+							"port": "{{CONFIG_PORT}}",
 							"path": [
 								"decrypt"
 							]
@@ -121,12 +121,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/organization/OptimaGrowth/license",
+							"raw": "http://localhost:{{LICENSING_PORT}}/v1/organization/OptimaGrowth/license",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"v1",
 								"organization",
@@ -159,12 +159,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/organization/OptimaGrowth/license",
+							"raw": "http://localhost:{{LICENSING_PORT}}/v1/organization/OptimaGrowth/license",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"v1",
 								"organization",
@@ -181,12 +181,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId",
+							"raw": "http://localhost:{{LICENSING_PORT}}/v1/organization/:organizationId/license/:licenseId",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"v1",
 								"organization",
@@ -220,12 +220,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/v1/organization/:organizationId/license/",
+							"raw": "http://localhost:{{LICENSING_PORT}}/v1/organization/:organizationId/license/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"v1",
 								"organization",
@@ -249,12 +249,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId/feign",
+							"raw": "http://localhost:{{LICENSING_PORT}}/v1/organization/:organizationId/license/:licenseId/feign",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"v1",
 								"organization",
@@ -283,12 +283,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId/discovery",
+							"raw": "http://localhost:{{LICENSING_PORT}}/v1/organization/:organizationId/license/:licenseId/discovery",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"v1",
 								"organization",
@@ -317,12 +317,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId/rest",
+							"raw": "http://localhost:{{LICENSING_PORT}}/v1/organization/:organizationId/license/:licenseId/rest",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"v1",
 								"organization",
@@ -358,12 +358,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/v1/organization/:organizationId/license/:licenseId",
+							"raw": "http://localhost:{{LICENSING_PORT}}/v1/organization/:organizationId/license/:licenseId",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"v1",
 								"organization",
@@ -391,12 +391,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/actuator/health",
+							"raw": "http://localhost:{{LICENSING_PORT}}/actuator/health",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"actuator",
 								"health"
@@ -411,12 +411,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/actuator/env",
+							"raw": "http://localhost:{{LICENSING_PORT}}/actuator/env",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"actuator",
 								"env"
@@ -431,12 +431,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/actuator/metrics",
+							"raw": "http://localhost:{{LICENSING_PORT}}/actuator/metrics",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"actuator",
 								"metrics"
@@ -451,12 +451,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/actuator/metrics/:metric",
+							"raw": "http://localhost:{{LICENSING_PORT}}/actuator/metrics/:metric",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "{{LICENSING_PORT}}",
 							"path": [
 								"actuator",
 								"metrics",
@@ -483,16 +483,177 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8070/eureka/apps/organization-service",
+							"raw": "http://localhost:{{EUREKA_PORT}}/eureka/apps/organization-service",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8070",
+							"port": "{{EUREKA_PORT}}",
 							"path": [
 								"eureka",
 								"apps",
 								"organization-service"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "organization",
+			"item": [
+				{
+					"name": "/organization/ [create]",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"e6a625cc-718b-48c2-ac76-1dfdff9a5123\",\n    \"name\": \"Test\",\n    \"contactName\": \"Illary Huaylupo\",\n    \"contactEmail\": \"illaryhs@gmail.com\",\n    \"contactPhone\": \"888888888\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{ORGANIZATION_PORT}}/v1/organization",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{ORGANIZATION_PORT}}",
+							"path": [
+								"v1",
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/organization/ [get]",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:{{ORGANIZATION_PORT}}/v1/organization/:organizationId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{ORGANIZATION_PORT}}",
+							"path": [
+								"v1",
+								"organization",
+								":organizationId"
+							],
+							"variable": [
+								{
+									"key": "organizationId",
+									"value": "e6a625cc-718b-48c2-ac76-1dfdff9a5123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/organization/ [update]",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"e6a625cc-718b-48c2-ac76-1dfdff9a5123\",\n    \"name\": \"Test\",\n    \"contactName\": \"Illary Huaylupo\",\n    \"contactEmail\": \"illaryhs@gmail.com\",\n    \"contactPhone\": \"999999999\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{ORGANIZATION_PORT}}/v1/organization/:organizationId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{ORGANIZATION_PORT}}",
+							"path": [
+								"v1",
+								"organization",
+								":organizationId"
+							],
+							"variable": [
+								{
+									"key": "organizationId",
+									"value": "e6a625cc-718b-48c2-ac76-1dfdff9a5123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/organization/ [delete]",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"e6a625cc-718b-48c2-ac76-1dfdff9a5123\",\n    \"name\": \"Test\",\n    \"contactName\": \"Illary Huaylupo\",\n    \"contactEmail\": \"illaryhs@gmail.com\",\n    \"contactPhone\": \"999999999\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{ORGANIZATION_PORT}}/v1/organization/:organizationId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{ORGANIZATION_PORT}}",
+							"path": [
+								"v1",
+								"organization",
+								":organizationId"
+							],
+							"variable": [
+								{
+									"key": "organizationId",
+									"value": "e6a625cc-718b-48c2-ac76-1dfdff9a5123"
+								}
 							]
 						}
 					},
@@ -506,12 +667,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8072/actuator/gateway/routes",
+					"raw": "http://localhost:{{GATEWAY_PORT}}/actuator/gateway/routes",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8072",
+					"port": "{{GATEWAY_PORT}}",
 					"path": [
 						"actuator",
 						"gateway",
@@ -550,6 +711,117 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "/openid-connect/token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "rPBRtezIYjmlhWWtEpuHJcNi2PN86RVf",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ostock",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "default"
+						},
+						{
+							"key": "username",
+							"value": "illary.huaylupo",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:{{KEYCLOAK_PORT}}/auth/realms/spmia-realm/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{KEYCLOAK_PORT}}",
+					"path": [
+						"auth",
+						"realms",
+						"spmia-realm",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "GATEWAY_PORT",
+			"value": "8072",
+			"type": "default"
+		},
+		{
+			"key": "CONFIG_PORT",
+			"value": "8071",
+			"type": "default"
+		},
+		{
+			"key": "EUREKA_PORT",
+			"value": "8070",
+			"type": "default"
+		},
+		{
+			"key": "LICENSING_PORT",
+			"value": "8090",
+			"type": "default"
+		},
+		{
+			"key": "ORGANIZATION_PORT",
+			"value": "8091",
+			"type": "default"
+		},
+		{
+			"key": "KEYCLOAK_PORT",
+			"value": "8080",
+			"type": "default"
 		}
 	]
 }

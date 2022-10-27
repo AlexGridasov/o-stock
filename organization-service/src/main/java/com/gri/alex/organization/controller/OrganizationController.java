@@ -24,32 +24,28 @@ public class OrganizationController {
     private OrganizationService service;
 
     @GetMapping(value = "/{organizationId}")
-    public ResponseEntity<Organization> getOrganization(
-            @PathVariable("organizationId") String organizationId) {
+    public ResponseEntity<Organization> getOrganization(@PathVariable("organizationId") String organizationId) {
 
         return ResponseEntity.ok(service.findById(organizationId));
     }
 
     @PutMapping(value = "/{organizationId}")
-    public void updateOrganization(
-            @PathVariable("organizationId") String id,
-            @RequestBody Organization organization) {
+    public void updateOrganization(@PathVariable("organizationId") String id,
+                                   @RequestBody Organization organization) {
 
         service.update(organization);
     }
 
     @PostMapping
-    public ResponseEntity<Organization> saveOrganization(
-            @RequestBody Organization organization) {
+    public ResponseEntity<Organization> saveOrganization(@RequestBody Organization organization) {
 
         return ResponseEntity.ok(service.create(organization));
     }
 
     @DeleteMapping(value = "/{organizationId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteOrganization(
-            @PathVariable("id") String id,
-            @RequestBody Organization organization) {
+    public void deleteOrganization(@PathVariable("organizationId") String id,
+                                   @RequestBody Organization organization) {
 
         service.delete(organization);
     }

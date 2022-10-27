@@ -1,5 +1,5 @@
 server:
-  port: '8081'
+  port: '8091'
 
 spring:
   jpa:
@@ -33,6 +33,16 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       defaultZone: http://localhost:8070/eureka/
+
+keycloak:
+  auth-server-url: http://keycloak:8080/auth
+  credentials:
+    secret: rPBRtezIYjmlhWWtEpuHJcNi2PN86RVf
+  realm: spmia-realm
+  bearer-only: 'true'
+  use-resource-role-mappings: 'true'
+  ssl-required: external
+  resource: ostock
 
 management:
   endpoints:

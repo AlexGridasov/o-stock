@@ -43,7 +43,7 @@ Browsers to http://localhost:8070 to view the Eureka dashboard
 docker images
 docker run ostock/licensing-service:0.0.1-SNAPSHOT
 docker run -d ostock/licensing-service:0.0.1-SNAPSHOT
-docker run -it -p8080:8080 ostock/licensing-service:0.0.1-SNAPSHOT
+docker run -it -p8090:8080 ostock/licensing-service:0.0.1-SNAPSHOT
 docker stop <container_id>
 ```
 
@@ -53,7 +53,7 @@ docker stop <container_id>
 # This command downloads all the necessary images and then deploys these and starts the container.
 # The -d parameter indicates to run Docker in the background.
 docker-compose up -d
-docker-compose -f docker-compose-db.yml up
+docker-compose -f docker-compose-min.yml up
 
 # Lets you view all the information about your latest deployment.
 docker-compose logs
@@ -70,6 +70,10 @@ docker-compose stop
 
 # Shuts down everything and removes all containers.
 docker-compose down
+
+# Keycloak service
+docker pull jboss/keycloak:16.1.1
+docker run -p 8080:8080 jboss/keycloak
 ```
 
 # Troubleshooting
