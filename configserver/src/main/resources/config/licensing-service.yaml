@@ -34,5 +34,15 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8070/eureka}
 
+keycloak:
+  auth-server-url: http://localhost:8080/auth
+  credentials:
+    secret: rPBRtezIYjmlhWWtEpuHJcNi2PN86RVf
+  realm: spmia-realm
+  bearer-only: 'true'
+  use-resource-role-mappings: 'true'
+  ssl-required: external
+  resource: ostock
+
 example:
   property: I AM THE DEFAULT

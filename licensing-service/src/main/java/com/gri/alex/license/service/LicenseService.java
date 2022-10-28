@@ -46,11 +46,8 @@ public class LicenseService {
     OrganizationDiscoveryClient organizationDiscoveryClient;
 
     public License getLicense(String licenseId, String organizationId) {
-        License license = licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
-        if (license == null) {
-            throw new IllegalArgumentException(String.format(
-                    messages.getMessage("license.search.error.message", null, null), licenseId, organizationId));
-        }
+        License license = getLicense(licenseId, organizationId, "rest");
+
         return license.withComment(config.getProperty());
     }
 
