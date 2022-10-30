@@ -685,15 +685,25 @@
 		{
 			"name": "/gateway/license",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ0Y0J0LVpDR1lnc1lsQXJ1Qlk3cnhONVdlRHRXaG1VY09QZjJ2WDR0VTBJIn0.eyJleHAiOjE2NjcxNjEyODAsImlhdCI6MTY2NzE1NzY4MCwianRpIjoiOGNhYTdjOTMtMmU3NC00NmY5LTllZTktMWQ5NGJlYjcyOGVkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3NwbWlhLXJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImY0N2YyNWEzLWVhM2MtNDViNi05Y2Y3LWQ3ZGI0Yzc1ZWY3MSIsInR5cCI6IkJlYXJlciIsImF6cCI6Im9zdG9jayIsInNlc3Npb25fc3RhdGUiOiJhYWU2Yzc5Yi04M2I3LTRhZGQtYmVhNS1mOGM3NGI4MzQyNmIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zcG1pYS1yZWFsbSIsInVtYV9hdXRob3JpemF0aW9uIiwib3N0b2NrLWFkbWluIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib3N0b2NrIjp7InJvbGVzIjpbIkFETUlOIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJzaWQiOiJhYWU2Yzc5Yi04M2I3LTRhZGQtYmVhNS1mOGM3NGI4MzQyNmIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiaWxsYXJ5Lmh1YXlsdXBvIn0.OQ-8abufAHylLt628yHVHFAiHfebm3iWRhr-sYg5siH46rf78MJFd2gmY6FX6FoWMzJBSpRvctSuLCDxBpFQtPSs9P8ZnB4_Mcxw5fs0dV0jZfbFN9M5HXxpZlRfoyPS_h_qX_6tctglruuZohuHJuOyvzDiy9Z8F-1X9LkYFSEGZ6Kij7OGxgHdO6CZP9WfKYDj9cU0K0QM110drPS28n-dm4Efg8FrncgK5n1YxAdqE6hnBouBUlX5Nw9vGffApV9DiSBoaWLAeTNHgLSH1sExknIAouLfUf6AwED2c2ocLFXMNyhPD6FgIWXlTz24n1H9hS5uLy2mx7WGrqkcyg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8072/license/v1/organization/:organizationId/license/",
+					"raw": "http://localhost:{{GATEWAY_PORT}}/license/v1/organization/:organizationId/license/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8072",
+					"port": "{{GATEWAY_PORT}}",
 					"path": [
 						"license",
 						"v1",
